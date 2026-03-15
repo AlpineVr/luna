@@ -4,6 +4,6 @@ services:
   portfolio:
     build: .
     ports:
-      - "1234:80"
+      - "2345:80"
     restart: unless-stopped
-    container_name: darcy-portfolio
+    container_name: luna
