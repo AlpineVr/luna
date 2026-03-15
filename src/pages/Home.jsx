@@ -130,7 +130,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-8 text-center text-white/20 text-xs tracking-widest uppercase">
-        © 2026 LunaPalooza — All Rights Reserved
+        This site was created by Darcy Thripp for Y12 Physics Task 1
       </footer>
     </div>
   );
