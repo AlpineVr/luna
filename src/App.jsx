@@ -9,6 +9,8 @@ import Rides from "./pages/Rides";
 
 const queryClient = new QueryClient();
 
+document.title = "LunaPalooza by Darcy Thripp";
+
 function AppContent() {
   const location = useLocation();
   
