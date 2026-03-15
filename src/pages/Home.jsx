@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronDown, Star, Rocket } from "lucide-react";
+import { MoonshotAnimation, CraterHopAnimation } from "@/components/RideAnimations";
 
 export default function Home() {
   return (
@@ -59,7 +60,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-white/50 font-light tracking-wide max-w-2xl mx-auto mb-12">
-            Welcome To LunaPalooza! The ultimate thrill park based on the lunar surface. With gravity a mere 1/6th of that on Earth, no atmosphere, and a landscape never before experienced, the moon poses the ultimate experience to anyone who dares venture there.
+            Welcome To LunaPalooza! The ultimate thrill park based on the lunar surface. With gravity a mere 1/6th of that on Earth, no atmosphere, and a landscape never before experienced, the moon poses the ultimate experience to anyone who dares venture there. Guests will explore the park in next-generation pressure suits, designed for mobility and safety. Every attraction at LunaPalooza is designed to take advantage of the unique environment the moon offers, so your adventure to the moon will be otherworldly.
           </p>
 
           <Link
@@ -92,37 +93,37 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          {/* Ride 1 */}
-          <Link to="/Rides#lunarhopper">
+          {/* Ride 1 — CraterHop */}
+          <Link to="/Rides#craterhop">
             <motion.div
               whileHover={{ scale: 1.02, y: -4 }}
               transition={{ duration: 0.3 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-900/40 to-purple-900/20 p-8 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-900/40 to-purple-900/20 cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🌙</span>
+              <CraterHopAnimation className="rounded-t-2xl opacity-90 group-hover:opacity-100 transition-opacity" />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">The CraterHop™</h3>
+                <p className="text-white/50 text-sm mb-4">The ultimate hop across the lunar surface — soar 5km, peak at 1248m, and float for 78.5 seconds.</p>
+                <p className="text-indigo-400/70 text-sm font-semibold">Explore →</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">The LunarHoppr™</h3>
-              <p className="text-white/50 text-sm mb-4">The ultimate hop across the lunar surface — soar 5km, peak at 1248m, and float for 78.5 seconds.</p>
-              <p className="text-indigo-400/70 text-sm font-semibold">Explore →</p>
             </motion.div>
           </Link>
 
-          {/* Ride 2 placeholder */}
-          <Link to="/Rides#ride2">
+          {/* Ride 2 — Moonshot */}
+          <Link to="/Rides#moonshot">
             <motion.div
               whileHover={{ scale: 1.02, y: -4 }}
               transition={{ duration: 0.3 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-blue-900/40 to-cyan-900/20 p-8 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-blue-900/40 to-cyan-900/20 cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🚀</span>
+              <MoonshotAnimation className="rounded-t-2xl opacity-90 group-hover:opacity-100 transition-opacity" />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">The Moonshot</h3>
+                <p className="text-white/50 text-sm mb-4">Launch 760m into the sky at 175kph and float in complete weightlessness for 60 seconds.</p>
+                <p className="text-blue-400/70 text-sm font-semibold">Explore →</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">The Moonshot</h3>
-              <p className="text-white/50 text-sm mb-4">Launch 760m into the sky at 175kph and float in complete weightlessness for 60 seconds.</p>
-              <p className="text-blue-400/70 text-sm font-semibold">Explore →</p>
             </motion.div>
           </Link>
         </div>
@@ -130,7 +131,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-8 text-center text-white/20 text-xs tracking-widest uppercase">
-        This site was created by Darcy Thripp for Y12 Physics Task 1
+        © 2026 LunaPalooza — All Rights Reserved
       </footer>
     </div>
   );
